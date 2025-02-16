@@ -50,18 +50,18 @@ public class LoginActivity extends AppCompatActivity {
             String email = emailInput.getText().toString().trim();
             String password = passwordInput.getText().toString().trim();
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(LoginActivity.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
-            } else {
+//            if (email.isEmpty() || password.isEmpty()) {
+//                Toast.makeText(LoginActivity.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
+//            } else {
                 // Dummy login (replace with Firebase Authentication)
-                if (email.equals("user@example.com") && password.equals("123456")) {
+                if (email.equals("") && password.equals("")) {
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    startActivity(new Intent(LoginActivity.this, profile_picker.class));
                     finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                 }
-            }
+//            }
         });
 
         // Navigate to Sign-Up Page
